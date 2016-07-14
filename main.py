@@ -105,8 +105,7 @@ def newer_entry(number):
 def delete_entry(number, entry):
     """Allows user to delete the current entry"""
     print("Are you sure you wish to delete this entry?")
-    response = input("y/N ")
-    response = validate_input(response, 'yes_no')
+    response = validate_input(input("y/N "), 'yes_no')
     if response != 'Y':
         view_entries(number)
     else:
